@@ -23,18 +23,18 @@ namespace csvLoadClass
         public MainWindow()
         {
             InitializeComponent();
-            ArrayList al = new ArrayList();
-            CSVLoadClass.LoadCsv(ref al);
-            this.label1.Content = al.Capacity;
-            this.label2.Content = al[0];
-/*            this.label3.Content = al[1].ToString();
-            this.label4.Content = al[2].ToString();
-            this.label5.Content = al[3].ToString();
-            this.label6.Content = al[4].ToString();
-            this.label7.Content = al[5].ToString();
-            this.label8.Content = al[6].ToString();
-            this.label9.Content = al[7].ToString();
-            this.label10.Content = al[8].ToString();*/
+            List<string> sl = new List<string>();
+            CSVLoadClass.LoadCsv(ref sl);
+            this.label1.Content = sl.Count;
+            this.label2.Content = sl[0];
+/*            this.label3.Content = sl[1].ToString();
+            this.label4.Content = sl[2].ToString();
+            this.label5.Content = sl[3].ToString();
+            this.label6.Content = sl[4].ToString();
+            this.label7.Content = sl[5].ToString();
+            this.label8.Content = sl[6].ToString();
+            this.label9.Content = sl[7].ToString();
+            this.label10.Content = sl[8].ToString();*/
         }
     }
 }

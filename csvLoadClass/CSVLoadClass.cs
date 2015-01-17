@@ -14,28 +14,26 @@ namespace csvLoadClass
 
     class CSVLoadClass
     {
-        public static void LoadCsv(ref ArrayList al)
+        public static void LoadCsv(ref List<string> sl)
         {
             string rootPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);//ドキュメントまでのパス
-            string Resource = @"\GitHub\kinect2014\YudukiProject\text";//テキストデータの場所
+            string Resource = @"\GitHub\csvLoadClass\csv\";//csvデータの場所
             string line = ""; //文字列を読み込むためのstring型変数
             List<string> Lstring = new List<string>();
-            al = new ArrayList();//文字を格納するための変数、List配列、オブジェクト型
             try
             {
                 // csvファイルを開く
-                using (var sr = new StreamReader(@"test.csv",Encoding.GetEncoding("UTF-8")))
+                using (var sr = new StreamReader(rootPath+Resource+"sample.csv"))
                 {
                     // ストリームの末尾まで繰り返す
                     //while (!sr.EndOfStream)
                     while ((line = sr.ReadLine()) != null)
                     {
                         // ファイルから一行読み込む
-                        //line = sr.ReadLine();
                         // 読み込んだ一行をカンマ毎に分けて配列に格納する
-                        Lstring = new List<string>(line.Split(','));
+                        sl = new List<string>(line.Split(','));
                     }
-                    al.Add(Lstring);
+                    //al.Add(Lstring);
                 }
             }
             catch (System.Exception e)
