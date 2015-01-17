@@ -23,7 +23,7 @@ namespace csvLoadClass
             try
             {
                 // csvファイルを開く
-                using (var sr = new StreamReader(rootPath+Resource+"sample.csv"))
+                using (var sr = new StreamReader(rootPath+Resource+"sample3.csv"))
                 {
                     // ストリームの末尾まで繰り返す
                     //while (!sr.EndOfStream)
