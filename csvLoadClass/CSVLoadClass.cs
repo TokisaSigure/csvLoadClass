@@ -33,13 +33,11 @@ namespace csvLoadClass
                         // 読み込んだ一行をカンマ毎に分けて配列に格納する
                         sl = new List<string>(line.Split(','));
                     }
-                    //al.Add(Lstring);
                 }
             }
             catch (System.Exception e)
             {
                 // ファイルを開くのに失敗したとき
-                System.Console.WriteLine(e.Message);
                 Environment.Exit(0);//アプリケーション終了
             }
         }

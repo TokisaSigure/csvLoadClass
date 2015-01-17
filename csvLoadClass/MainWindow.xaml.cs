@@ -23,6 +23,7 @@ namespace csvLoadClass
         public MainWindow()
         {
             InitializeComponent();
+            string[] str=new string[30];
             List<string> sl = new List<string>();
             CSVLoadClass.LoadCsv(ref sl);
             this.label1.Content = sl.Count;
@@ -35,6 +36,9 @@ namespace csvLoadClass
             this.label8.Content = sl[6].ToString();
             this.label9.Content = sl[7].ToString();
             this.label10.Content = sl[8].ToString();*/
+
+            CSVLoadClassVer2.LoadCSV(ref str);
+            this.label3.Content = str[0];
         }
     }
 }
